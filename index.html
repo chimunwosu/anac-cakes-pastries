@@ -23,7 +23,10 @@
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1200&q=60&fm=webp" type="image/webp">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -90,7 +93,7 @@
     .hero {
       min-height: 100vh;
       background: linear-gradient(rgba(26,26,46,0.82), rgba(22,33,62,0.88)),
-                  url('https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1600&q=80') center/cover no-repeat;
+                  url('https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1200&q=60&fm=webp') center/cover no-repeat;
       display: flex; align-items: center; justify-content: center;
       text-align: center; padding: 6rem 2rem 4rem;
       position: relative; overflow: hidden;
@@ -302,7 +305,7 @@
     /* ── Vision ── */
     .vision {
       background: linear-gradient(rgba(26,26,46,0.85), rgba(22,33,62,0.9)),
-                  url('https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=1400&q=80') center/cover no-repeat fixed;
+                  url('https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=1000&q=60&fm=webp') center/cover no-repeat;
       text-align: center; color: white; padding: 5rem 2rem;
     }
     .vision .section-subtitle { color: var(--gold); }
@@ -492,7 +495,7 @@
           </p>
         </div>
         <div class="about-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80" alt="Elegant cake display" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=60&fm=webp" alt="Elegant cake display" loading="lazy" width="600" height="400" decoding="async">
           <div class="about-img-overlay">
             <h3>A Decade of Excellence</h3>
             <p>From a home kitchen to a premier bakery serving all of Nigeria since 2012.</p>
@@ -510,42 +513,42 @@
       <div class="section-line"></div>
       <div class="services-grid">
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80" alt="Wedding cake" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=400&q=60&fm=webp" alt="Wedding cake" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Wedding Cakes</h3>
             <p>Beautifully crafted, custom-designed cakes for your special day. Every detail tailored to your vision.</p>
           </div>
         </div>
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=80" alt="Anniversary cake" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=400&q=60&fm=webp" alt="Anniversary cake" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Anniversary Cakes</h3>
             <p>Elegant and personalised cakes to mark life's milestones with sweetness and style.</p>
           </div>
         </div>
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Small chops finger food" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=60&fm=webp" alt="Small chops finger food" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Small Chops</h3>
             <p>A variety of delicious bite-sized finger foods, perfect for any gathering or celebration.</p>
           </div>
         </div>
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Fresh pastries" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=60&fm=webp" alt="Fresh pastries" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Chin-Chin</h3>
             <p>Our signature crispy Nigerian snack, freshly made and bursting with flavour.</p>
           </div>
         </div>
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering buffet spread" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=60&fm=webp" alt="Catering buffet spread" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Catering Services</h3>
             <p>Full event catering tailored to your taste and guest list. From intimate dinners to grand celebrations.</p>
           </div>
         </div>
         <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Event decoration" class="service-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&q=60&fm=webp" alt="Event decoration" class="service-img" loading="lazy" width="400" height="200" decoding="async">
           <div class="service-card-body">
             <h3>Decoration Services</h3>
             <p>Stunning event decorations to transform any venue into a memorable and breathtaking space.</p>
@@ -624,35 +627,35 @@
       <div class="section-line"></div>
       <div class="gallery-grid">
         <div class="gallery-item tall fade-up">
-          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80" alt="Multi-tier wedding cake" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=400&q=60&fm=webp" alt="Multi-tier wedding cake" loading="lazy" width="400" height="510" decoding="async">
           <div class="gallery-overlay"><span>Wedding Cakes</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80" alt="Decorated cupcakes" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&q=60&fm=webp" alt="Decorated cupcakes" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Cupcakes</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering spread" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=60&fm=webp" alt="Catering spread" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Catering</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Celebration cake" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=60&fm=webp" alt="Celebration cake" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Celebrations</span></div>
         </div>
         <div class="gallery-item wide fade-up">
-          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" alt="Decorated event venue" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=60&fm=webp" alt="Decorated event venue" loading="lazy" width="600" height="250" decoding="async">
           <div class="gallery-overlay"><span>Event Decoration</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=600&q=80" alt="Pastries display" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=400&q=60&fm=webp" alt="Pastries display" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Pastries</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=80" alt="Birthday cake" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=400&q=60&fm=webp" alt="Birthday cake" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Birthday Cakes</span></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food platter" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=60&fm=webp" alt="Food platter" loading="lazy" width="400" height="250" decoding="async">
           <div class="gallery-overlay"><span>Small Chops</span></div>
         </div>
       </div>
