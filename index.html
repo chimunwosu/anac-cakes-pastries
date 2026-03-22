@@ -390,6 +390,63 @@
     }
     .submit-btn:hover { background: var(--gold); color: var(--dark); }
 
+    /* ── Order Form ── */
+    .order { background: var(--cream); }
+    .order-wrapper {
+      max-width: 800px; margin: 0 auto;
+      background: white; border: 1px solid #eee;
+      padding: 3rem; position: relative;
+    }
+    .order-wrapper::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px; background: var(--gold);
+    }
+    .order-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .order-form label {
+      font-size: 0.82rem; font-weight: 600; color: var(--dark);
+      letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 0.3rem; display: block;
+    }
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      width: 100%; padding: 0.9rem 1rem;
+      border: 1px solid #ddd; background: white;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem;
+      transition: border-color 0.3s; outline: none;
+      color: var(--text); appearance: none;
+    }
+    .order-form input:focus,
+    .order-form select:focus,
+    .order-form textarea:focus { border-color: var(--gold); }
+    .order-form textarea { resize: vertical; min-height: 100px; }
+    .order-form select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B6B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem; cursor: pointer;
+    }
+    .order-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .order-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+    .order-group { display: flex; flex-direction: column; }
+    .order-note {
+      font-size: 0.8rem; color: var(--text-light);
+      text-align: center; margin-top: 0.5rem;
+    }
+    .order-submit {
+      padding: 1.1rem 2rem; background: var(--dark); color: var(--gold);
+      border: none; cursor: pointer; letter-spacing: 3px;
+      text-transform: uppercase; font-size: 0.85rem; font-weight: 600;
+      font-family: 'Inter', sans-serif; transition: all 0.3s;
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    }
+    .order-submit:hover { background: var(--gold); color: var(--dark); }
+    .order-submit svg { width: 18px; height: 18px; fill: currentColor; }
+    @media (max-width: 768px) {
+      .order-wrapper { padding: 2rem 1.5rem; }
+      .order-row, .order-row-3 { grid-template-columns: 1fr; }
+    }
+
     /* ── Footer ── */
     footer {
       background: var(--dark); color: #888;
@@ -449,6 +506,7 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#values">Values</a></li>
         <li><a href="#story">Our Story</a></li>
+        <li><a href="#order">Order</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -715,6 +773,128 @@
     </div>
   </section>
 
+  <!-- Order / Quote Request -->
+  <section class="order" id="order">
+    <div class="section-inner">
+      <p class="section-subtitle">Request a Quote</p>
+      <h2 class="section-title">Place Your Order</h2>
+      <div class="section-line"></div>
+      <div class="order-wrapper fade-up">
+        <form class="order-form" id="orderForm" onsubmit="handleOrder(event)">
+
+          <div class="order-row">
+            <div class="order-group">
+              <label for="orderName">Your Name</label>
+              <input type="text" id="orderName" placeholder="Full name" required>
+            </div>
+            <div class="order-group">
+              <label for="orderPhone">Phone / WhatsApp</label>
+              <input type="tel" id="orderPhone" placeholder="+234 ..." required>
+            </div>
+          </div>
+
+          <div class="order-row">
+            <div class="order-group">
+              <label for="orderService">Service Type</label>
+              <select id="orderService" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Wedding Cake">Wedding Cake</option>
+                <option value="Anniversary Cake">Anniversary Cake</option>
+                <option value="Birthday Cake">Birthday Cake</option>
+                <option value="Small Chops">Small Chops</option>
+                <option value="Chin-Chin">Chin-Chin</option>
+                <option value="Catering">Catering Services</option>
+                <option value="Decoration">Decoration Services</option>
+                <option value="Cake + Catering">Cake + Catering Combo</option>
+                <option value="Full Event Package">Full Event Package</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="order-group">
+              <label for="orderDate">Event Date</label>
+              <input type="date" id="orderDate" required>
+            </div>
+          </div>
+
+          <div class="order-row-3">
+            <div class="order-group">
+              <label for="orderTiers">Cake Tiers</label>
+              <select id="orderTiers">
+                <option value="" disabled selected>Select tiers</option>
+                <option value="1 Tier">1 Tier</option>
+                <option value="2 Tiers">2 Tiers</option>
+                <option value="3 Tiers">3 Tiers</option>
+                <option value="4 Tiers">4 Tiers</option>
+                <option value="5+ Tiers">5+ Tiers</option>
+                <option value="N/A">Not applicable</option>
+              </select>
+            </div>
+            <div class="order-group">
+              <label for="orderSize">Cake Size</label>
+              <select id="orderSize">
+                <option value="" disabled selected>Select size</option>
+                <option value="6 inches">6 inches</option>
+                <option value="8 inches">8 inches</option>
+                <option value="10 inches">10 inches</option>
+                <option value="12 inches">12 inches</option>
+                <option value="14 inches">14 inches</option>
+                <option value="Custom">Custom size</option>
+                <option value="N/A">Not applicable</option>
+              </select>
+            </div>
+            <div class="order-group">
+              <label for="orderBudget">Budget Range</label>
+              <select id="orderBudget">
+                <option value="" disabled selected>Select budget</option>
+                <option value="Under 50,000">Under &#8358;50,000</option>
+                <option value="50,000 - 100,000">&#8358;50,000 - &#8358;100,000</option>
+                <option value="100,000 - 250,000">&#8358;100,000 - &#8358;250,000</option>
+                <option value="250,000 - 500,000">&#8358;250,000 - &#8358;500,000</option>
+                <option value="500,000 - 1,000,000">&#8358;500,000 - &#8358;1,000,000</option>
+                <option value="Above 1,000,000">Above &#8358;1,000,000</option>
+                <option value="Flexible">Flexible / Discuss</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="order-row">
+            <div class="order-group">
+              <label for="orderGuests">Number of Guests</label>
+              <input type="number" id="orderGuests" placeholder="e.g. 150" min="1">
+            </div>
+            <div class="order-group">
+              <label for="orderFlavour">Preferred Flavour</label>
+              <select id="orderFlavour">
+                <option value="" disabled selected>Select flavour</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Red Velvet">Red Velvet</option>
+                <option value="Lemon">Lemon</option>
+                <option value="Carrot">Carrot</option>
+                <option value="Fruit Cake">Fruit Cake</option>
+                <option value="Marble">Marble</option>
+                <option value="Coconut">Coconut</option>
+                <option value="Other">Other / Surprise me</option>
+                <option value="N/A">Not applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="order-group">
+            <label for="orderDetails">Additional Details</label>
+            <textarea id="orderDetails" placeholder="Describe your vision — colours, theme, inscription, special requests, delivery location..."></textarea>
+          </div>
+
+          <button type="submit" class="order-submit">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.052 31.2l6.012-1.93A15.905 15.905 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.35 22.614c-.396 1.116-1.97 2.042-3.234 2.312-.866.182-1.998.328-5.808-1.248-4.876-2.016-8.012-6.958-8.254-7.28-.232-.322-1.952-2.6-1.952-4.958s1.234-3.52 1.672-4.002c.438-.482.958-.602 1.276-.602.318 0 .636.002.914.016.294.014.688-.112 1.076.822.396.952 1.354 3.31 1.472 3.55.118.242.198.522.04.842-.158.322-.238.522-.478.802-.238.282-.502.63-.716.846-.238.238-.486.498-.208.976.276.478 1.23 2.028 2.64 3.286 1.816 1.618 3.348 2.122 3.826 2.36.478.238.758.198 1.036-.118.278-.318 1.196-1.392 1.514-1.872.318-.478.636-.398 1.074-.238.438.158 2.794 1.318 3.272 1.558.478.238.796.358.914.558.118.198.118 1.156-.278 2.272z"/></svg>
+            Send Order via WhatsApp
+          </button>
+          <p class="order-note">Your order details will be sent directly to our WhatsApp for a quick personalised quote.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="contact" id="contact">
     <div class="section-inner">
@@ -823,6 +1003,58 @@
         btn.style.color = '';
         e.target.reset();
       }, 3000);
+    }
+
+    // Order form — sends to WhatsApp
+    function handleOrder(e) {
+      e.preventDefault();
+      const g = id => document.getElementById(id).value;
+      const name = g('orderName');
+      const phone = g('orderPhone');
+      const service = g('orderService');
+      const date = g('orderDate');
+      const tiers = g('orderTiers') || 'Not specified';
+      const size = g('orderSize') || 'Not specified';
+      const budget = g('orderBudget') || 'Not specified';
+      const guests = g('orderGuests') || 'Not specified';
+      const flavour = g('orderFlavour') || 'Not specified';
+      const details = g('orderDetails') || 'None';
+
+      const msg = `Hello ANAC Cakes! I'd like to request a quote.\n\n` +
+        `*ORDER DETAILS*\n` +
+        `----------------------------\n` +
+        `*Name:* ${name}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Service:* ${service}\n` +
+        `*Event Date:* ${date}\n` +
+        `*Cake Tiers:* ${tiers}\n` +
+        `*Cake Size:* ${size}\n` +
+        `*Flavour:* ${flavour}\n` +
+        `*No. of Guests:* ${guests}\n` +
+        `*Budget:* ${budget}\n` +
+        `----------------------------\n` +
+        `*Additional Details:*\n${details}\n\n` +
+        `Looking forward to your response!`;
+
+      const url = 'https://wa.me/2347048051298?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+
+      const btn = e.target.querySelector('.order-submit');
+      btn.innerHTML = '&#10003; Order Sent!';
+      btn.style.background = '#27ae60';
+      btn.style.color = 'white';
+      setTimeout(() => {
+        btn.innerHTML = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.052 31.2l6.012-1.93A15.905 15.905 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.35 22.614c-.396 1.116-1.97 2.042-3.234 2.312-.866.182-1.998.328-5.808-1.248-4.876-2.016-8.012-6.958-8.254-7.28-.232-.322-1.952-2.6-1.952-4.958s1.234-3.52 1.672-4.002c.438-.482.958-.602 1.276-.602.318 0 .636.002.914.016.294.014.688-.112 1.076.822.396.952 1.354 3.31 1.472 3.55.118.242.198.522.04.842-.158.322-.238.522-.478.802-.238.282-.502.63-.716.846-.238.238-.486.498-.208.976.276.478 1.23 2.028 2.64 3.286 1.816 1.618 3.348 2.122 3.826 2.36.478.238.758.198 1.036-.118.278-.318 1.196-1.392 1.514-1.872.318-.478.636-.398 1.074-.238.438.158 2.794 1.318 3.272 1.558.478.238.796.358.914.558.118.198.118 1.156-.278 2.272z"/></svg> Send Order via WhatsApp';
+        btn.style.background = '';
+        btn.style.color = '';
+        e.target.reset();
+      }, 4000);
+    }
+
+    // Set minimum date to today for the order form
+    const dateInput = document.getElementById('orderDate');
+    if (dateInput) {
+      dateInput.min = new Date().toISOString().split('T')[0];
     }
   </script>
 
