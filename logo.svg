@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A44C;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#F0D27C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#C4943C;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4943C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#9A7430;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="600" height="700" rx="0" fill="#1A1A2E"/>
+
+  <!-- Outer gold frame -->
+  <rect x="25" y="25" width="550" height="650" rx="8" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--         STACKED MONOGRAM: N A C       -->
+  <!-- ══════════════════════════════════════ -->
+
+  <!-- ── Letter N (Top) ── -->
+  <!-- Left vertical bar -->
+  <rect x="210" y="100" width="28" height="130" fill="url(#gold)"/>
+  <!-- Right vertical bar -->
+  <rect x="362" y="100" width="28" height="130" fill="url(#gold)"/>
+  <!-- Diagonal connector -->
+  <polygon points="210,100 238,100 390,230 362,230" fill="url(#gold)"/>
+  <!-- Subtle inner shadow on diagonal -->
+  <polygon points="215,108 238,108 385,225 365,225" fill="url(#goldDark)" opacity="0.3"/>
+
+  <!-- ── Letter A (Middle) ── -->
+  <!-- Left leg -->
+  <polygon points="255,260 300,380 272,380 218,260" fill="url(#gold)"/>
+  <!-- Right leg -->
+  <polygon points="345,260 382,260 328,380 300,380" fill="url(#gold)"/>
+  <!-- Top peak / triangle cap -->
+  <polygon points="300,240 320,260 280,260" fill="url(#gold)"/>
+  <!-- Connect legs to peak -->
+  <polygon points="280,260 300,240 255,260" fill="url(#gold)"/>
+  <polygon points="300,240 320,260 345,260" fill="url(#gold)"/>
+  <!-- Crossbar -->
+  <rect x="252" y="325" width="96" height="16" rx="2" fill="url(#gold)"/>
+  <!-- Inner triangle cutout (dark) to define A shape -->
+  <polygon points="300,268 270,340 330,340" fill="#1A1A2E"/>
+  <polygon points="300,268 270,325 330,325" fill="#1A1A2E"/>
+
+  <!-- ── Letter C (Bottom) ── -->
+  <!-- Main C arc using path -->
+  <path d="M370,460
+           C370,410 340,395 300,395
+           C245,395 220,425 220,470
+           C220,515 245,545 300,545
+           C340,545 370,530 370,480"
+        fill="none" stroke="url(#gold)" stroke-width="28" stroke-linecap="round"/>
+  <!-- Cut the right side to make it a C (cover with background) -->
+  <rect x="355" y="440" width="50" height="60" fill="#1A1A2E"/>
+
+  <!-- ── Decorative separator dots between letters ── -->
+  <!-- Between N and A -->
+  <circle cx="270" cy="248" r="2.5" fill="url(#gold)" opacity="0.5"/>
+  <circle cx="300" cy="248" r="3" fill="url(#gold)" opacity="0.7"/>
+  <circle cx="330" cy="248" r="2.5" fill="url(#gold)" opacity="0.5"/>
+
+  <!-- Between A and C -->
+  <circle cx="270" cy="390" r="2.5" fill="url(#gold)" opacity="0.5"/>
+  <circle cx="300" cy="390" r="3" fill="url(#gold)" opacity="0.7"/>
+  <circle cx="330" cy="390" r="2.5" fill="url(#gold)" opacity="0.5"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--            BRAND TEXT                  -->
+  <!-- ══════════════════════════════════════ -->
+
+  <!-- Decorative line -->
+  <line x1="140" y1="585" x2="250" y2="585" stroke="url(#gold)" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="265" cy="585" r="2.5" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="300" cy="585" r="3.5" fill="url(#gold)" opacity="0.8"/>
+  <circle cx="335" cy="585" r="2.5" fill="url(#gold)" opacity="0.6"/>
+  <line x1="350" y1="585" x2="460" y2="585" stroke="url(#gold)" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Brand name -->
+  <text x="300" y="620" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', serif" font-size="22" fill="url(#gold)" letter-spacing="10" opacity="0.9">CAKES &amp; PASTRIES</text>
+
+  <!-- Tagline -->
+  <text x="300" y="655" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#F0D27C" letter-spacing="4" opacity="0.5">EST. 2012 ~ OWERRI, NIGERIA</text>
+
+</svg>
